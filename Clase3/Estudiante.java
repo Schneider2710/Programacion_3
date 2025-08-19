@@ -15,6 +15,11 @@ public class Estudiante{
         this.facultad = facultad;
     }
 
+    //Metodo Matricular cursos
+    public void matricularCusros(String[] cursos){
+        System.out.println(Arrays.toString(cursos))
+    }
+
     //Metodo toString 
     public  String toString(){
         return "Estudiante: [id: " + id + "Cedúla: " + cedula + " Nombre: " + nombre + "Facultad: " + facultad + "]";
