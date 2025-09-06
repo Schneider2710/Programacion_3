@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Estudiante{
 
     //Atributos
@@ -5,11 +7,11 @@ public class Estudiante{
     private int id;
     private int cedula;
     private String nombre;
-    private String facultad
+    private String facultad;
 
     //Constructor
-    public Estudiante(int id, int cedula, string nombre, string facultad){
-        this.id = id
+    public Estudiante(int id, int cedula, String nombre, String facultad){
+        this.id = id;
         this.cedula = cedula;
         this.nombre = nombre;
         this.facultad = facultad;
@@ -17,7 +19,7 @@ public class Estudiante{
 
     //Metodo Matricular cursos
     public void matricularCusros(String[] cursos){
-        System.out.println(Arrays.toString(cursos))
+        System.out.println(Arrays.toString(cursos));
     }
 
     //Metodo toString 
