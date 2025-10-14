@@ -65,6 +65,7 @@ public class ExamenColaMapa {
             suma = suma + cola.desencolar();
         }
 
+        //retorna suma
         return suma;
     }
 
