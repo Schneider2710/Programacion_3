@@ -49,7 +49,7 @@ public class ExamenColaMapa {
         // Crear una cola con la capacidad igual a la longitud de la cadena
         ColaCircularEnteros cola = new ColaCircularEnteros(s.length());
 
-        // Recorrer la cadena y encola +1 por "'('"" y -1 por "')'""
+        // Recorrer la cadena y encola +1 por cada "'('"" y -1 por cada "')'""
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c == '(') {
