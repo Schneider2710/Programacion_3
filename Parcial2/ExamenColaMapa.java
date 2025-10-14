@@ -60,7 +60,6 @@ public class ExamenColaMapa {
         }
 
         // Desencola y sumar todos los valores 
-
         int suma = 0;
         while (!cola.estaVacia()) {
             suma = suma + cola.desencolar();
@@ -73,28 +72,23 @@ public class ExamenColaMapa {
     public static int registrarIntento(Map<String, Integer> intentos, String nombre) {
         
         // Verificar si el nombre(llave) ya existe en el mapa
-
         if (intentos.containsKey(nombre)) {
 
             // Obtener el valor actual
-
             int valorActual = intentos.get(nombre);
 
             // Incrementar en 1
-
             intentos.put(nombre, valorActual + 1);
 
             // Retornar el nuevo valor
-
             return valorActual + 1;
 
         } else {
+
             // Si no existe, iniciar en 1
-            
             intentos.put(nombre, 1);
             
             // Retornar 1
-            
             return 1;
         }
     }
