@@ -74,10 +74,10 @@ public class ExamenColaMapa {
         // Verificar si el nombre(llave) ya existe en el mapa
         if (intentos.containsKey(nombre)) {
 
-            // Obtener el valor actual
+            // Obtener el valor actual de nombre(llave)
             int valorActual = intentos.get(nombre);
 
-            // Incrementar en 1
+            // Incrementar en 1 si el nombre se repite
             intentos.put(nombre, valorActual + 1);
 
             // Retornar el nuevo valor
@@ -85,7 +85,7 @@ public class ExamenColaMapa {
 
         } else {
 
-            // Si no existe, iniciar en 1
+            // Si no, iniciar en 1
             intentos.put(nombre, 1);
             
             // Retornar 1
