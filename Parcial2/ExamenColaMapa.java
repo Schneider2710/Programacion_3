@@ -59,7 +59,7 @@ public class ExamenColaMapa {
             }
         }
 
-        // Desencola y sumar todos los valores 
+        // Desencola y sumar todos los valores obtenidos
         int suma = 0;
         while (!cola.estaVacia()) {
             suma = suma + cola.desencolar();
