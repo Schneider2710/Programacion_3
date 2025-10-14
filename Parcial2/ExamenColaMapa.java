@@ -46,7 +46,7 @@ public class ExamenColaMapa {
     // (50 pts ) Calcula el balance de parentesis encolando +1 y -1.
     public static int balanceConCola(String s) {
 
-        // Crear cola con capacidad igual a la longitud de la cadena
+        // Crear una cola con la capacidad igual a la longitud de la cadena
         ColaCircularEnteros cola = new ColaCircularEnteros(s.length());
 
         // Recorrer la cadena y encola +1 por "'('"" y -1 por "')'""
@@ -81,7 +81,7 @@ public class ExamenColaMapa {
             // Incrementar en 1 si el nombre se repite
             intentos.put(nombre, valorActual + 1);
 
-            // Retornar el nuevo valor
+            // Finalizaria retornando el nuevo valor
             return valorActual + 1;
 
         } else {
@@ -89,7 +89,7 @@ public class ExamenColaMapa {
             // Si no, iniciar en 1
             intentos.put(nombre, 1);
             
-            // Retornar 1
+            // Y retornaria 1
             return 1;
         }
     }
