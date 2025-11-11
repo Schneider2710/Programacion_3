@@ -1,6 +1,6 @@
 import java.util.*;
 
-class MergeSort { // Clase para ordenamiento por mezcla
+class MergeSort { 
     public static void ordenar(int[] arr, int izq, int der) { // Método recursivo principal
         if (izq < der) { // Si hay más de un elemento
             int medio = (izq + der) / 2; // Calculamos el punto medio

@@ -2,7 +2,7 @@ import java.util.*;
 
 class Burbuja { 
     public static void ordenar(int[] arr) { 
-        int n = arr.length; // Guardamos el tamaño del arreglo
+        int n = arr.length; // Guarda el tamaño del arreglo
         for (int i = 0; i < n - 1; i++) { // Ciclo externo: número de pasadas
             for (int j = 0; j < n - i - 1; j++) { // Ciclo interno: comparaciones en cada pasada
                 if (arr[j] > arr[j + 1]) { // Si el elemento actual es mayor que el siguiente

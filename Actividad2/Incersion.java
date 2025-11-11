@@ -1,5 +1,5 @@
 import java.util.*;
-class Insercion { // Clase para ordenamiento por inserción
+class Insercion {
     public static void ordenar(int[] arr) { // Método de ordenamiento
         for (int i = 1; i < arr.length; i++) { // Empezamos desde el segundo elemento
             int clave = arr[i]; // Guardamos el elemento a insertar

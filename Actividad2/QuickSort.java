@@ -1,5 +1,5 @@
 import java.util.*;
-class QuickSort { // Clase para ordenamiento rápido
+class QuickSort { 
     public static void ordenar(int[] arr, int bajo, int alto) { // Método recursivo de ordenamiento
         if (bajo < alto) { // Si hay más de un elemento para ordenar
             int pi = particion(arr, bajo, alto); // Particionamos y obtenemos posición del pivote

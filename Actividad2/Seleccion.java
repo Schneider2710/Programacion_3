@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Seleccion { // Clase para ordenamiento por selección
+class Seleccion { 
     public static void ordenar(int[] arr) { // Método de ordenamiento
         for (int i = 0; i < arr.length - 1; i++) { // Recorremos hasta el penúltimo elemento
             int min = i; // Asumimos que el mínimo está en la posición i
