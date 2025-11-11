@@ -1,0 +1,45 @@
+class Dijkstra { // Clase para algoritmo de camino más corto
+    public static void calcular(int[][] grafo, int inicio) { // Método que calcula distancias mínimas
+        int n = grafo.length; // Obtenemos el número de vértices
+        int[] dist = new int[n]; // Arreglo para guardar distancias mínimas
+        boolean[] visitado = new boolean[n]; // Arreglo para marcar vértices visitados
+
+        for (int i = 0; i < n; i++)
+            dist[i] = 999999; // Inicializamos distancias como infinito
+        dist[inicio] = 0; // La distancia al vértice inicial es 0
+
+        for (int c = 0; c < n - 1; c++) { // Procesamos n-1 vértices
+            int min = 999999, u = -1; // min guarda distancia mínima, u el vértice
+            for (int v = 0; v < n; v++) { // Buscamos el vértice no visitado más cercano
+                if (!visitado[v] && dist[v] < min) { // Si no está visitado y tiene menor distancia
+                    min = dist[v]; // Actualizamos la distancia mínima
+                    u = v; // Guardamos el vértice
+                }
+            }
+            visitado[u] = true; // Marcamos el vértice como visitado
+
+            for (int v = 0; v < n; v++) { // Revisamos todos los vértices
+                if (!visitado[v] && grafo[u][v] != 0 && // Si v no visitado y hay conexión
+                        dist[u] + grafo[u][v] < dist[v]) { // Y el nuevo camino es más corto
+                    dist[v] = dist[u] + grafo[u][v]; // Actualizamos la distancia mínima a v
+                }
+            }
+        }
+
+        System.out.println("Distancias desde vértice " + inicio + ":"); // Imprimimos encabezado
+        for (int i = 0; i < n; i++) { // Recorremos todos los vértices
+            System.out.println("  Vértice " + i + ": " + dist[i]); // Mostramos distancia a cada vértice
+        }
+    }
+
+    public static void main(String[] args) { // Método principal
+        int[][] grafo = { // Creamos matriz de adyacencia (grafo dirigido)
+                { 0, 10, 3, 0, 0 }, // Conexiones desde vértice 0
+                { 0, 0, 1, 2, 0 }, // Conexiones desde vértice 1
+                { 0, 4, 0, 8, 2 }, // Conexiones desde vértice 2
+                { 0, 0, 0, 0, 7 }, // Conexiones desde vértice 3
+                { 0, 0, 0, 9, 0 } // Conexiones desde vértice 4
+        };
+        calcular(grafo, 0); // Calculamos distancias desde el vértice 0
+    }
+}
